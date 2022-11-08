@@ -6,16 +6,21 @@ var noOfClick = 0;
 function increasePxSize()
 {
 noOfClick += 2;
-outputMessage.innerText = inputText.value;
+displayMessage();
 outputMessage.style.fontSize = noOfClick+"px";
+
 }
 function decreasePxSize()
 {
 noOfClick -= 2;
-outputMessage.innerText = inputText.value;
+displayMessage();
 outputMessage.style.fontSize = noOfClick+"px";
 }
-btnIncreasePx.addEventListener("click", increasePxSize);
-btnDecreasePx.addEventListener("click", decreasePxSize);
+function displayMessage(){   
+
+    outputMessage.innerText = inputText.value;
+}
+ btnIncreasePx.addEventListener("click", increasePxSize);
+ btnDecreasePx.addEventListener("click", decreasePxSize);
 
 
